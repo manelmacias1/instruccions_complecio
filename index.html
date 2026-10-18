@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="ca" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografia Proves de Compleció 2026-2027 | Institut de l'Ebre</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ebre: {
+                            navy: '#002B49',
+                            blue: '#00558B',
+                            cyan: '#00A3E0',
+                            light: '#E6F4FA',
+                            accent: '#E65100',
+                            gold: '#D97706',
+                            dark: '#0B192C'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-display { font-family: 'Outfit', sans-serif; }
+        
+        @media print {
+            .no-print { display: none !important; }
+            .print-break { page-break-before: always; }
+            body { background: white !important; color: black !important; }
+            .shadow-lg, .shadow-xl, .shadow-md { box-shadow: none !important; }
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #F1F5F9;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col selection:bg-ebre-cyan selection:text-white">
+
+    <!-- Capçalera Principal -->
+    <header class="bg-ebre-navy text-white sticky top-0 z-50 shadow-md border-b-4 border-ebre-cyan">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="bg-white p-2 rounded-lg flex items-center justify-center shadow-inner">
+                    <!-- Logo al·lusiu a Institut de l'Ebre -->
+                    <svg class="w-8 h-8 text-ebre-navy" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-ebre-cyan block">Institut de l'Ebre · Tortosa</span>
+                    <h1 class="text-lg sm:text-xl font-bold font-display leading-tight">Proves de Compleció LOE · Curs 2026-2027</h1>
+                </div>
+            </div>
+
+            <!-- Accions ràpides -->
+            <div class="flex items-center gap-2 no-print">
+                <div class="relative hidden md:block">
+                    <input type="text" id="searchInput" placeholder="Cerca terminis, rutes..." 
+                           class="bg-ebre-blue/60 text-white placeholder-slate-300 text-sm rounded-lg pl-9 pr-4 py-1.5 focus:outline-none focus:ring-2 focus:ring-ebre-cyan w-56 transition-all">
+                    <svg class="w-4 h-4 text-slate-300 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                </div>
+                <button onclick="window.print()" class="bg-ebre-blue hover:bg-ebre-cyan text-white text-xs sm:text-sm font-medium px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-colors border border-white/20">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+                    </svg>
+                    <span>Imprimir / PDF</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8">
+
+        <!-- Banner Hero amb dates urgents -->
+        <section class="bg-gradient-to-r from-ebre-navy via-ebre-blue to-slate-800 rounded-2xl text-white p-6 sm:p-8 shadow-xl relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
+                <svg class="w-96 h-96 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                </svg>
+            </div>
+
+            <div class="relative z-10 max-w-3xl">
+                <div class="inline-flex items-center gap-2 bg-ebre-cyan/20 border border-ebre-cyan/40 px-3 py-1 rounded-full text-xs font-semibold text-ebre-cyan mb-3">
+                    <span class="w-2 h-2 rounded-full bg-ebre-cyan animate-pulse"></span>
+                    1a Convocatòria: Novembre 2026 | 2a Convocatòria: Abril 2027
+                </div>
+                <h2 class="text-2xl sm:text-4xl font-extrabold font-display leading-tight mb-3">
+                    Resum i Guia d'Actuació de les Proves de Compleció
+                </h2>
+                <p class="text-slate-200 text-sm sm:text-base leading-relaxed mb-6">
+                    Infografia organitzativa per al professorat, caps de departament i alumnat matriculat en els cicles formatius de l'Institut de l'Ebre.
+                </p>
+
+                <!-- Targetes mètriques ràpides -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                    <div class="bg-white/10 backdrop-blur-md p-3 rounded-xl border border-white/10">
+                        <span class="text-xs text-slate-300 block font-medium">Límite Calendari</span>
+                        <span class="text-lg sm:text-xl font-bold text-amber-300">21 Oct · 23:59h</span>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-3 rounded-xl border border-white/10">
+                        <span class="text-xs text-slate-300 block font-medium">Límite Criteris</span>
+                        <span class="text-lg sm:text-xl font-bold text-amber-300">28 Oct · 23:59h</span>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-3 rounded-xl border border-white/10">
+                        <span class="text-xs text-slate-300 block font-medium">Proves 1a Conv.</span>
+                        <span class="text-lg sm:text-xl font-bold text-cyan-300">1 – 30 Novembre</span>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-3 rounded-xl border border-white/10">
+                        <span class="text-xs text-slate-300 block font-medium">Junta Avaluació</span>
+                        <span class="text-lg sm:text-xl font-bold text-emerald-300">17 Desembre</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner d'Alerta d'Acció Immediata -->
+        <section class="bg-amber-50 border-l-4 border-amber-500 p-4 sm:p-5 rounded-xl shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div class="flex items-start gap-3">
+                <div class="p-2 bg-amber-100 text-amber-700 rounded-lg shrink-0">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-bold text-amber-900 text-base font-display">Dimecres 21 d'Octubre de 2026 a les 23:59 h</h3>
+                    <p class="text-sm text-amber-800">
+                        Termini final per omplir el calendari de proves de tots els cicles formatius al full de càlcul departamental (s'ha de tancar a la reunió de departament del 21/10).
+                    </p>
+                </div>
+            </div>
+            <a href="#calendari-section" class="shrink-0 bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                Veure instruccions de calendari
+            </a>
+        </section>
+
+        <!-- Filtres per perfil -->
+        <section class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-4 no-print">
+            <div class="flex items-center gap-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Filtrar vista per:</span>
+                <div class="inline-flex p-1 bg-slate-200/80 rounded-xl text-xs font-medium">
+                    <button onclick="filterRole('all')" id="btn-all" class="role-btn px-3 py-1.5 rounded-lg bg-white text-ebre-navy shadow-sm font-semibold transition-all">Tots els aspectes</button>
+                    <button onclick="filterRole('docents')" id="btn-docents" class="role-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-ebre-navy transition-all">Docents / Caps Dept.</button>
+                    <button onclick="filterRole('alumnat')" id="btn-alumnat" class="role-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-ebre-navy transition-all">Alumnat</button>
+                </div>
+            </div>
+
+            <div class="text-xs text-slate-500">
+                Mostrant informació actualitzada oficial per al curs <strong class="text-slate-800">2026-2027</strong>
+            </div>
+        </section>
+
+        <!-- Línia de Temps Cronològica -->
+        <section class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200" id="timeline-section">
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                    <h2 class="text-xl font-bold font-display text-ebre-navy flex items-center gap-2">
+                        <svg class="w-6 h-6 text-ebre-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                        Cronograma de la Convocatòria (2026 - 2027)
+                    </h2>
+                    <p class="text-xs text-slate-500">Seqüència temporal dels terminis d'inscripció, coordinació, comunicació i realització.</p>
+                </div>
+            </div>
+
+            <div class="relative border-l-2 border-ebre-cyan/30 ml-3 sm:ml-6 space-y-8 my-4">
+
+                <!-- Pas 1 -->
+                <div class="relative pl-6 sm:pl-8 role-card role-alumnat role-docents">
+                    <div class="absolute -left-3 top-1 w-6 h-6 rounded-full bg-ebre-navy border-4 border-white text-white flex items-center justify-center text-xs font-bold shadow">
+                        1
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                            <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-ebre-navy text-white">1 - 15 d'Octubre 2026</span>
+                            <span class="text-xs font-semibold text-slate-500">Inscripció Alumnat</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-sm">Inscripció de l'Alumnat (1a i 2a Convocatòria)</h4>
+                        <p class="text-xs text-slate-600 mt-1">
+                            L'alumnat es pot inscriure per a participar en les convocatòries de <strong>novembre i d'abril</strong>. 
+                            <em>(Nota: Del 1 al 15 de març s'obrirà la inscripció només per a la convocatòria d'abril).</em>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pas 2 -->
+                <div class="relative pl-6 sm:pl-8 role-card role-docents">
+                    <div class="absolute -left-3 top-1 w-6 h-6 rounded-full bg-ebre-blue border-4 border-white text-white flex items-center justify-center text-xs font-bold shadow">
+                        2
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                            <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-ebre-blue text-white">A mesura que entren matrícules</span>
+                            <span class="text-xs font-semibold text-slate-500">Gestió Interna</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-sm">Disponibilitat del Full de Matrícula</h4>
+                        <p class="text-xs text-slate-600 mt-1">
+                            A la carpeta compartida de cada departament (`Compleció` → `Matrícula compleció`) es diposita el full de càlcul amb l'alumnat matriculat i els mòduls corresponents.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pas 3 - CRÍTIC -->
+                <div class="relative pl-6 sm:pl-8 role-card role-docents">
+                    <div class="absolute -left-3 top-1 w-6 h-6 rounded-full bg-amber-600 border-4 border-white text-white flex items-center justify-center text-xs font-bold shadow ring-2 ring-amber-400">
+                        3
+                    </div>
+                    <div class="bg-amber-50/80 p-4 rounded-xl border border-amber-300">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                            <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-amber-600 text-white">Dimecres 21 Octubre · 23:59h</span>
+                            <span class="text-xs font-bold uppercase tracking-wide text-amber-700">Data Límit Strictes</span>
+                        </div>
+                        <h4 class="font-bold text-amber-950 text-base">Tancament del Calendari de Proves Departamentals</h4>
+                        <p class="text-xs text-amber-900 mt-1 leading-relaxed">
+                            El calendari ha d'estar completat al full de càlcul compartit. Es requereix tancar-ho a la <strong>reunió de departament del mateix 21/10/2026</strong>. Posteriorment es publicarà directament al web del centre.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pas 4 -->
+                <div class="relative pl-6 sm:pl-8 role-card role-docents role-alumnat">
+                    <div class="absolute -left-3 top-1 w-6 h-6 rounded-full bg-ebre-cyan border-4 border-white text-white flex items-center justify-center text-xs font-bold shadow">
+                        4
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                            <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-ebre-cyan text-white">13 - 28 d'Octubre 2026</span>
+                            <span class="text-xs font-semibold text-slate-500">Comunicació</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-sm">Contacte Professorat – Alumnat & Criteris</h4>
+                        <p class="text-xs text-slate-600 mt-1">
+                            El professorat responsable ha de contactar per correu electrònic amb l'alumnat per enviar la informació de la prova i demanar confirmació. 
+                            <strong>Data límit per tenir criteris penjats a la carpeta i comunicats: 28 d'octubre a les 23:59h</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pas 5 -->
+                <div class="relative pl-6 sm:pl-8 role-card role-docents role-alumnat">
+                    <div class="absolute -left-3 top-1 w-6 h-6 rounded-full bg-emerald-600 border-4 border-white text-white flex items-center justify-center text-xs font-bold shadow">
+                        5
+                    </div>
+                    <div class="bg-emerald-50/60 p-4 rounded-xl border border-emerald-200">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                            <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-600 text-white">1 - 30 Novembre 2026</span>
+                            <span class="text-xs font-semibold text-emerald-800">1a Convocatòria</span>
+                        </div>
+                        <h4 class="font-bold text-emerald-950 text-sm">Realització de les Proves d'Avaluació</h4>
+                        <p class="text-xs text-emerald-900 mt-1">
+                            Realització de les proves escrites, pràctiques, defenses de projecte o simulacions segons la programació establerta.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pas 6 -->
+                <div class="relative pl-6 sm:pl-8 role-card role-docents">
+                    <div class="absolute -left-3 top-1 w-6 h-6 rounded-full bg-indigo-600 border-4 border-white text-white flex items-center justify-center text-xs font-bold shadow">
+                        6
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                            <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-indigo-600 text-white">17 Desembre 2026</span>
+                            <span class="text-xs font-semibold text-slate-500">Avaluació SAGA</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-sm">Junta d'Avaluació de Compleció (1a Convocatòria)</h4>
+                        <p class="text-xs text-slate-600 mt-1">
+                            Introducció de qualificacions a SAGA. Presidida pel tutor/a de 2n curs 2026-2027 i formada per l'equip docent participant.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pas 7 - SEGONA CONVOCATÒRIA -->
+                <div class="relative pl-6 sm:pl-8 role-card role-docents role-alumnat">
+                    <div class="absolute -left-3 top-1 w-6 h-6 rounded-full bg-slate-400 border-4 border-white text-white flex items-center justify-center text-xs font-bold shadow">
+                        7
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 opacity-90">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                            <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-slate-600 text-white">1 - 15 Març & 1 - 30 Abril 2027</span>
+                            <span class="text-xs font-semibold text-slate-500">2a Convocatòria</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-sm">Segona Oportunitat (Convocatòria d'Abril)</h4>
+                        <p class="text-xs text-slate-600 mt-1">
+                            Inscripció d'alumnat que no ho va fer a l'octubre (1-15 març) i realització de les proves oficials de la 2a convocatòria (1-30 d'abril).
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Blocs d'Aspectes Clau en Graella -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <!-- Card 1: Calendari i Reserva d'Espais -->
+            <section class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between role-card role-docents" id="calendari-section">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-2.5 bg-ebre-light rounded-xl text-ebre-navy">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="text-xs text-ebre-cyan font-semibold uppercase tracking-wider">Secció 3</span>
+                            <h3 class="text-lg font-bold font-display text-ebre-navy">Calendari i Reserva d'Espais</h3>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 text-xs sm:text-sm text-slate-600">
+                        <p class="leading-relaxed">
+                            Per garantir una planificació clara i anticipada, cal registrar totes les dades del calendari departamental directament a la ruta compartida.
+                        </p>
+
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                            <span class="font-semibold text-slate-800 block mb-1">Camps de detall obligatoris per MP/UF:</span>
+                            <ul class="grid grid-cols-2 gap-1 text-xs text-slate-700">
+                                <li class="flex items-center gap-1.5"><span class="text-ebre-cyan">✓</span> Data o dates</li>
+                                <li class="flex items-center gap-1.5"><span class="text-ebre-cyan">✓</span> Horari concret</li>
+                                <li class="flex items-center gap-1.5"><span class="text-ebre-cyan">✓</span> MP / UF afectada</li>
+                                <li class="flex items-center gap-1.5"><span class="text-ebre-cyan">✓</span> Aula reservada</li>
+                                <li class="flex items-center gap-1.5"><span class="text-ebre-cyan">✓</span> Prof. responsable</li>
+                                <li class="flex items-center gap-1.5"><span class="text-ebre-cyan">✓</span> Material específic</li>
+                            </ul>
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="flex items-start gap-2">
+                                <span class="p-1 bg-amber-100 text-amber-800 rounded text-xs font-bold shrink-0">Tardes</span>
+                                <p class="text-xs">
+                                    <strong>Prioritat horària:</strong> Les proves es programaran prioritàriament a la tarda, quan el centre disposa de més aules lliures.
+                                </p>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="p-1 bg-ebre-light text-ebre-navy rounded text-xs font-bold shrink-0">Reserves</span>
+                                <p class="text-xs">
+                                    El professor/a responsable fa la reserva directament. En cas de dificultats o d'encavalcaments, cal coordinar-se directament amb el <strong>Cap d'Estudis</strong>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                    <span>Publicació: Directa al web del centre</span>
+                    <span class="font-bold text-amber-600">Límite: 21/10/2026</span>
+                </div>
+            </section>
+
+            <!-- Card 2: Rutes Documentals i Ubicació dels Arxius -->
+            <section class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between role-card role-docents">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-2.5 bg-sky-100 text-sky-800 rounded-xl">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="text-xs text-sky-600 font-semibold uppercase tracking-wider">Secció 4 & Documentació</span>
+                            <h3 class="text-lg font-bold font-display text-ebre-navy">Rutes i Estructura de Folders</h3>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-600 mb-3">
+                        Navega per l'arbre de directoris oficials creats a la unitat compartida de cada departament:
+                    </p>
+
+                    <!-- Explorador visual de carpetes -->
+                    <div class="bg-slate-900 text-slate-200 p-3.5 rounded-xl font-mono text-xs space-y-2 overflow-x-auto custom-scrollbar">
+                        <div class="flex items-center gap-1.5 text-sky-400 font-bold">
+                            📁 DEPT_XXX
+                        </div>
+                        <div class="pl-4 border-l border-slate-700 space-y-1.5">
+                            <div class="text-slate-300">└── 📁 Curs 2026-2027</div>
+                            <div class="pl-6 border-l border-slate-700 space-y-1.5">
+                                <div class="text-slate-300">└── 📁 Cicle Formatiu XXX</div>
+                                <div class="pl-6 border-l border-slate-700 space-y-1.5">
+                                    <div class="text-amber-300 font-semibold">└── 📁 Compleció</div>
+                                    <div class="pl-6 border-l border-slate-700 space-y-1">
+                                        <div class="text-emerald-400">├── 📄 Calendari proves <span class="text-slate-500 font-sans text-[10px]">(Model de calendari)</span></div>
+                                        <div class="text-sky-300">├── 📄 Matrícula compleció <span class="text-slate-500 font-sans text-[10px]">(Alumnat inscrit)</span></div>
+                                        <div class="text-indigo-300">└── 📄 Criteris avaluació <span class="text-slate-500 font-sans text-[10px]">(Documents MP/UF)</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 p-2.5 bg-sky-50 rounded-lg border border-sky-200 text-xs text-sky-900 flex items-center justify-between">
+                        <span class="font-medium">Model de Document Oficial:</span>
+                        <code class="bg-white px-2 py-0.5 rounded border border-sky-300 font-bold text-[11px]">PGQC009_D04</code>
+                    </div>
+                </div>
+
+                <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500">
+                    Disponibles també directament des de la plataforma <strong>iEduca</strong>.
+                </div>
+            </section>
+
+            <!-- Card 3: Comunicació amb l'Alumnat -->
+            <section class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between role-card role-docents role-alumnat">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-2.5 bg-indigo-100 text-indigo-800 rounded-xl">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="text-xs text-indigo-600 font-semibold uppercase tracking-wider">Secció 5</span>
+                            <h3 class="text-lg font-bold font-display text-ebre-navy">Comunicació Obligatòria i Criteris</h3>
+                        </div>
+                    </div>
+
+                    <p class="text-xs sm:text-sm text-slate-600 mb-3">
+                        El professorat responsable ha de contactar amb l'alumnat matriculat entre el <strong>13/10/2026 i el 28/10/2026</strong> via <strong>correu electrònic</strong> per garantir claredat i traçabilitat.
+                    </p>
+
+                    <div class="bg-indigo-50/70 p-3 rounded-xl border border-indigo-100 space-y-2">
+                        <span class="text-xs font-bold text-indigo-900 block">Contingut mínim obligatori de la comunicació:</span>
+                        <ul class="text-xs text-indigo-950 space-y-1">
+                            <li class="flex items-start gap-1.5">
+                                <span class="text-indigo-600 font-bold">•</span>
+                                <span><strong>Resultats d'Aprenentatge (RA)</strong>, Criteris d'Avaluació (CA) i continguts.</span>
+                            </li>
+                            <li class="flex items-start gap-1.5">
+                                <span class="text-indigo-600 font-bold">•</span>
+                                <span><strong>Temari i materials</strong> de suport (Moodle, guies, dossiers).</span>
+                            </li>
+                            <li class="flex items-start gap-1.5">
+                                <span class="text-indigo-600 font-bold">•</span>
+                                <span><strong>Instruments d'avaluació</strong> (escrita, pràctica, projecte, simulació).</span>
+                            </li>
+                            <li class="flex items-start gap-1.5">
+                                <span class="text-indigo-600 font-bold">•</span>
+                                <span><strong>Detalls logístics:</strong> Data, hora, aula, durada i material necessari.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                    <span class="text-indigo-700 font-medium">⚠️ Demanar sempre confirmació de recepció</span>
+                    <span class="font-bold text-indigo-900">Termini: 28/10 23:59h</span>
+                </div>
+            </section>
+
+            <!-- Card 4: Tipologia de Proves i Normativa Assistencial -->
+            <section class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between role-card role-docents role-alumnat">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-2.5 bg-emerald-100 text-emerald-800 rounded-xl">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="text-xs text-emerald-600 font-semibold uppercase tracking-wider">Secció 6</span>
+                            <h3 class="text-lg font-bold font-display text-ebre-navy">Tipologia de Proves i Assistència</h3>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 text-xs sm:text-sm text-slate-600">
+                        <p>
+                            L'instrument d'avaluació és decidit sobiranament per l'<strong>equip docent</strong>. Pot consistir en:
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-2 text-xs">
+                            <div class="p-2 bg-slate-50 rounded border border-slate-200 font-medium text-slate-700 flex items-center gap-1">
+                                📝 Prova escrita
+                            </div>
+                            <div class="p-2 bg-slate-50 rounded border border-slate-200 font-medium text-slate-700 flex items-center gap-1">
+                                🛠️ Prova pràctica
+                            </div>
+                            <div class="p-2 bg-slate-50 rounded border border-slate-200 font-medium text-slate-700 flex items-center gap-1">
+                                📊 Presentació / Defensa
+                            </div>
+                            <div class="p-2 bg-slate-50 rounded border border-slate-200 font-medium text-slate-700 flex items-center gap-1">
+                                🔄 Simulació professional
+                            </div>
+                        </div>
+
+                        <!-- Avís Important d'assistència -->
+                        <div class="p-3 bg-red-50 border-l-4 border-red-500 rounded-r-lg text-red-900 text-xs leading-relaxed">
+                            <strong>Atenció amb les classes ordinàries:</strong> La matrícula de compleció <u>NO dona dret a assistir a les classes ordinàries</u> del nou pla d'estudis. No es poden programar classes de suport. Només es permeten <strong>activitats presencials puntuals</strong> degudament programades.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500 flex justify-between items-center">
+                    <span>Mòdul FCT: Inscripció oberta tot el període</span>
+                    <span class="text-emerald-700 font-semibold">Realització: Mes de Novembre</span>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Coordinació, Incidències i SAGA -->
+        <section class="bg-ebre-navy text-white p-6 sm:p-8 rounded-2xl shadow-lg role-card role-docents">
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="flex items-center gap-3">
+                    <div class="p-2 bg-ebre-cyan text-ebre-navy rounded-xl">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="text-xs text-ebre-cyan uppercase tracking-wider font-semibold">Secció 8</span>
+                        <h3 class="text-xl font-bold font-display">Coordinació Departamental & Registre a SAGA</h3>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div class="bg-white/10 p-4 rounded-xl border border-white/10 space-y-1.5">
+                        <div class="text-ebre-cyan font-bold text-sm">1. Vetllar per la coherència</div>
+                        <p class="text-xs text-slate-200">
+                            Els Caps de Departament garanteixen la coherència de dates i tipologia. Se suggereix compartir un Google Calendar o Excel departamental.
+                        </p>
+                    </div>
+
+                    <div class="bg-white/10 p-4 rounded-xl border border-white/10 space-y-1.5">
+                        <div class="text-amber-300 font-bold text-sm">2. Gestió d'Incidències</div>
+                        <p class="text-xs text-slate-200">
+                            Qualsevol incidència (canvis de data, aules o organització) s'ha de comunicar <strong>immediatament al Cap d'Estudis</strong>.
+                        </p>
+                    </div>
+
+                    <div class="bg-white/10 p-4 rounded-xl border border-white/10 space-y-1.5">
+                        <div class="text-emerald-300 font-bold text-sm">3. Junta d'Avaluació & SAGA</div>
+                        <p class="text-xs text-slate-200">
+                            L'entrada de qualificacions a SAGA es farà a la Junta prevista per al <strong>17 de desembre de 2026</strong>, presidida pel tutor/a de 2n curs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Checklist d'Actuació Docent Interactiu -->
+        <section class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200 no-print" id="checklist-section">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                <div>
+                    <h3 class="text-lg font-bold font-display text-ebre-navy flex items-center gap-2">
+                        <svg class="w-5 h-5 text-ebre-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                        </svg>
+                        Llista de Comprovació per al Professorat (Checklist)
+                    </h3>
+                    <p class="text-xs text-slate-500">Marca les tasques completades. El teu progrés es desa automàticament en aquest navegador.</p>
+                </div>
+                <button onclick="resetChecklist()" class="text-xs text-slate-400 hover:text-red-600 underline">Reiniciar llista</button>
+            </div>
+
+            <!-- Progrés -->
+            <div class="w-full bg-slate-100 rounded-full h-2.5 mb-6 overflow-hidden">
+                <div id="progress-bar" class="bg-ebre-cyan h-2.5 rounded-full transition-all duration-300" style="width: 0%"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
+                <label class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200 hover:bg-slate-100/80 cursor-pointer transition-colors">
+                    <input type="checkbox" onchange="updateChecklist()" class="check-item mt-1 w-4 h-4 text-ebre-blue rounded focus:ring-ebre-cyan">
+                    <span>Consultar la llista d'alumnat matriculat a la carpeta <code class="text-xs font-mono bg-white px-1 border rounded">Matrícula compleció</code>.</span>
+                </label>
+
+                <label class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200 hover:bg-slate-100/80 cursor-pointer transition-colors">
+                    <input type="checkbox" onchange="updateChecklist()" class="check-item mt-1 w-4 h-4 text-ebre-blue rounded focus:ring-ebre-cyan">
+                    <span>Emplenar les dades de data, hora, aula i materials al calendari de proves abans del <strong>21/10 23:59h</strong>.</span>
+                </label>
+
+                <label class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200 hover:bg-slate-100/80 cursor-pointer transition-colors">
+                    <input type="checkbox" onchange="updateChecklist()" class="check-item mt-1 w-4 h-4 text-ebre-blue rounded focus:ring-ebre-cyan">
+                    <span>Reservar directament l'aula o demanar assistència al Cap d'Estudis si cal.</span>
+                </label>
+
+                <label class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200 hover:bg-slate-100/80 cursor-pointer transition-colors">
+                    <input type="checkbox" onchange="updateChecklist()" class="check-item mt-1 w-4 h-4 text-ebre-blue rounded focus:ring-ebre-cyan">
+                    <span>Emplenar el document <code class="text-xs font-mono bg-white px-1 border rounded">PGQC009_D04</code> amb els criteris i instruments.</span>
+                </label>
+
+                <label class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200 hover:bg-slate-100/80 cursor-pointer transition-colors">
+                    <input type="checkbox" onchange="updateChecklist()" class="check-item mt-1 w-4 h-4 text-ebre-blue rounded focus:ring-ebre-cyan">
+                    <span>Enviar informació per correu a l'alumnat entre el 13 i el 28 d'octubre demanant confirmació.</span>
+                </label>
+
+                <label class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200 hover:bg-slate-100/80 cursor-pointer transition-colors">
+                    <input type="checkbox" onchange="updateChecklist()" class="check-item mt-1 w-4 h-4 text-ebre-blue rounded focus:ring-ebre-cyan">
+                    <span>Comprovar que el document estigui penjat a <code class="text-xs font-mono bg-white px-1 border rounded">Criteris avaluació</code> abans del 28/10 23:59h.</span>
+                </label>
+            </div>
+        </section>
+
+        <!-- Preguntes Freqüents / Cerca Ràpida -->
+        <section class="bg-slate-100 p-6 rounded-2xl border border-slate-200 space-y-4">
+            <h3 class="text-base font-bold font-display text-ebre-navy flex items-center gap-2">
+                <svg class="w-5 h-5 text-ebre-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                Preguntes Freqüents i Situacions Especials
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-700">
+                <div class="bg-white p-4 rounded-xl shadow-sm space-y-1">
+                    <span class="font-bold text-slate-900 block">L'alumnat té dret a assistir a classes ordinàries?</span>
+                    <p class="text-slate-600">No. La matrícula de compleció només dona dret a la realització de les proves d'avaluació i activitats presencials puntuals que es programin.</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl shadow-sm space-y-1">
+                    <span class="font-bold text-slate-900 block">Quan es fa la inscripció per al mòdul de FCT?</span>
+                    <p class="text-slate-600">La inscripció per a completar el mòdul de Formació en Centres de Treball (FCT) es pot realitzar en qualsevol moment dins del període de compleció.</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl shadow-sm space-y-1">
+                    <span class="font-bold text-slate-900 block">Què passa si hi ha un encavalcaments o falta d'aules?</span>
+                    <p class="text-slate-600">Es dona prioritat a la franja de tarda. Si es presenten dificultats d'espai, cal coordinar-se immediatament amb el Cap d'Estudis.</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl shadow-sm space-y-1">
+                    <span class="font-bold text-slate-900 block">Quin document s'ha d'utilitzar per als criteris?</span>
+                    <p class="text-slate-600">El model oficial és el <strong>PGQC009_D04_Criteris d'avaluació MP/UF en compleció</strong> disponible a la carpeta del cicle i a iEduca.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Peu de Pàgina Institucional -->
+    <footer class="bg-ebre-navy text-white mt-12 py-8 border-t-4 border-ebre-cyan">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+            <div class="flex items-center gap-3 text-center sm:text-left">
+                <div class="bg-white text-ebre-navy p-2 rounded-lg font-bold">
+                    IE
+                </div>
+                <div>
+                    <p class="font-bold text-sm">Institut de l'Ebre</p>
+                    <p class="text-slate-300">Av. Colom 34-42 · 43500 Tortosa · Tel: 977 500 949 · iesebre@iesebre.com</p>
+                </div>
+            </div>
+            <div class="text-slate-400 text-center sm:text-right space-y-1">
+                <p>Proves de Compleció LOE · Curs 2026-2027</p>
+                <p><a href="https://insebre.cat" target="_blank" rel="noopener" class="text-ebre-cyan hover:underline">www.insebre.cat</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Filtre per perfils de rol
+        function filterRole(role) {
+            const buttons = document.querySelectorAll('.role-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-white', 'text-ebre-navy', 'shadow-sm', 'font-semibold');
+                btn.classList.add('text-slate-600');
+            });
+
+            const activeBtn = document.getElementById(`btn-${role}`);
+            if (activeBtn) {
+                activeBtn.classList.add('bg-white', 'text-ebre-navy', 'shadow-sm', 'font-semibold');
+                activeBtn.classList.remove('text-slate-600');
+            }
+
+            const cards = document.querySelectorAll('.role-card');
+            cards.forEach(card => {
+                if (role === 'all') {
+                    card.style.display = 'flex';
+                    if (card.classList.contains('grid-item')) card.style.display = 'block';
+                } else {
+                    if (card.classList.contains(`role-${role}`)) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        // Cercador en temps real
+        document.getElementById('searchInput')?.addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.role-card, .bg-white, .bg-slate-50');
+
+            if (query === '') {
+                cards.forEach(c => c.style.opacity = '1');
+                return;
+            }
+
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                if (text.includes(query)) {
+                    card.style.opacity = '1';
+                } else {
+                    card.style.opacity = '0.35';
+                }
+            });
+        });
+
+        // Gestió de la Checklist amb LocalStorage
+        const STORAGE_KEY = 'ebre_complecio_checklist_2026';
+
+        function updateChecklist() {
+            const checkboxes = document.querySelectorAll('.check-item');
+            const states = Array.from(checkboxes).map(cb => cb.checked);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(states));
+
+            const total = checkboxes.length;
+            const checked = states.filter(Boolean).length;
+            const percent = Math.round((checked / total) * 100);
+
+            const progressBar = document.getElementById('progress-bar');
+            if (progressBar) {
+                progressBar.style.width = percent + '%';
+            }
+        }
+
+        function loadChecklist() {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved) {
+                try {
+                    const states = JSON.parse(saved);
+                    const checkboxes = document.querySelectorAll('.check-item');
+                    checkboxes.forEach((cb, idx) => {
+                        if (states[idx] !== undefined) {
+                            cb.checked = states[idx];
+                        }
+                    });
+                } catch (e) {
+                    console.error('Error al carregar la checklist', e);
+                }
+            }
+            updateChecklist();
+        }
+
+        function resetChecklist() {
+            localStorage.removeItem(STORAGE_KEY);
+            const checkboxes = document.querySelectorAll('.check-item');
+            checkboxes.forEach(cb => cb.checked = false);
+            updateChecklist();
+        }
+
+        // Inicialització al carregar
+        window.addEventListener('DOMContentLoaded', () => {
+            loadChecklist();
+        });
+    </script>
+</body>
+</html>
